@@ -102,11 +102,14 @@ export default function AIShowcase() {
               </div>
               <p className="text-white/90">{activeScenario.prompt}</p>
             </div>
-            <div className="flex items-start gap-3 rounded-2xl bg-white/10 p-4 text-sm text-white/80 shadow-lg shadow-black/40">
+            <div
+              className="flex items-start gap-3 rounded-2xl bg-white/10 p-4 text-sm text-white/80 shadow-lg shadow-black/40"
+              role="status"
+            >
               <div className="flex size-8 items-center justify-center rounded-full bg-white/15">
                 <Bot className="h-4 w-4" aria-hidden />
               </div>
-              <p className="text-white/90">
+              <p className="text-white/90" aria-live="polite">
                 {fullResponse.slice(0, visibleCharacters)}
                 {visibleCharacters < fullResponse.length ? (
                   <span className="ml-1 inline-block h-4 w-2 animate-pulse bg-white/70" aria-hidden />

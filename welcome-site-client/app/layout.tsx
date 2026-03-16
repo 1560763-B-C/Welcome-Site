@@ -44,3 +44,16 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: "BuilderStack — AI platform for Canadian homebuilders",
+  description:
+    "BuilderStack centralizes content automation, branded web experiences, and buyer insights — built with Canadian homebuilders in mind.",
+  keywords: [
+    "BuilderStack",
+    "homebuilder",
+    "AI",
+    "digital brochure",
+    "marketing automation",
+  ],
+};

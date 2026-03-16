@@ -27,14 +27,26 @@ export default function Footer() {
 
         <div className="space-y-2 text-sm">
           <p className="font-medium text-foreground">Solutions</p>
-          <Link href="/platform" className="block text-muted-foreground transition hover:text-foreground">
+          <Link
+            href="/platform"
+            title="Platform — BuilderStack"
+            className="block text-muted-foreground transition hover:text-foreground"
+          >
             Platform
           </Link>
-          <Link href="/features" className="block text-muted-foreground transition hover:text-foreground">
+          <Link
+            href="/features"
+            title="Capabilities — BuilderStack"
+            className="block text-muted-foreground transition hover:text-foreground"
+          >
             Capabilities
           </Link>
-          <Link href="/market" className="block text-muted-foreground transition hover:text-foreground">
-            Market Insight
+          <Link
+            href="/market"
+            title="Market insights — BuilderStack"
+            className="block text-muted-foreground transition hover:text-foreground"
+          >
+            Market Insights
           </Link>
         </div>
 
@@ -55,12 +67,16 @@ export default function Footer() {
           <p className="font-medium text-foreground">Connect</p>
           <Link
             href="mailto:hardawindersingh08@gmail.com"
+            title="Email BuilderStack"
+            aria-label="Email BuilderStack"
             className="block text-muted-foreground transition hover:text-foreground"
           >
             hardawindersingh08@gmail.com
           </Link>
           <a
             href="tel:+16047292663"
+            title="Call BuilderStack"
+            aria-label="Call BuilderStack"
             className="block text-muted-foreground transition hover:text-foreground"
           >
             +1 (604) 729-2663
