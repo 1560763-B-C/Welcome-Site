@@ -14,12 +14,12 @@ import Logo from "./Logo";
 import { useContactModal } from "@/components/ContactModalProvider";
 
 const navLinks = [
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About BuilderStack" },
   { href: "/platform", label: "Platform" },
-  { href: "/features", label: "Roadmap" },
-  { href: "/market", label: "Market" },
+  { href: "/features", label: "Roadmap & Features" },
+  { href: "/market", label: "Market Insights" },
   { href: "/team", label: "Team" },
-  { href: "/benefits", label: "Impact" },
+  { href: "/benefits", label: "Impact & Benefits" },
   { href: "/financials", label: "Financials" },
 ];
 
@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-r from-foregroundRed via-rose-500 to-orange-400/90 text-white shadow-[0_20px_45px_-25px_rgba(244,63,94,0.8)] backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-        <Link href="/">
+        <Link href="/" aria-label="BuilderStack – Home">
           <Logo />
         </Link>
 
@@ -45,6 +45,7 @@ export default function Navbar() {
                 <NavigationMenuItem key={item.href}>
                   <Link
                     href={item.href}
+                    title={`${item.label} — BuilderStack`}
                     className="text-sm font-medium text-white/80 transition hover:text-white"
                   >
                     {item.label}
@@ -55,6 +56,7 @@ export default function Navbar() {
           </NavigationMenu>
           <Button
             size="sm"
+            title="Contact BuilderStack"
             className="bg-white text-foreground shadow-lg shadow-rose-200/60 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-rose-200/80"
             onClick={openModal}
           >
@@ -80,6 +82,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
+                title={`${item.label} — BuilderStack`}
                 onClick={closeMenu}
                 className="rounded-lg bg-white/10 px-4 py-3 text-sm font-medium text-white transition hover:bg-white/20"
               >
@@ -88,6 +91,7 @@ export default function Navbar() {
             ))}
             <Button
               size="lg"
+              title="Contact BuilderStack"
               className="mt-2 bg-white text-foregroundRed shadow-lg shadow-rose-200/60 hover:bg-white/90"
               onClick={() => {
                 openModal();

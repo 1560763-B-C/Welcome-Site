@@ -36,9 +36,8 @@ export default function Logo({ className }: { className?: string }) {
         />
       </svg>
 
-      <span className="text-lg font-semibold tracking-tight">
-        BuilderStack
-      </span>
+      <span className="text-lg font-semibold tracking-tight">BuilderStack</span>
+      <span className="sr-only">BuilderStack — AI-powered construction platform</span>
     </div>
   );
 }
